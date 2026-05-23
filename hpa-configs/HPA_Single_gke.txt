@@ -1,0 +1,293 @@
+GKE Single service
+
+
+100 users 50% HPA
+
+kubectl get hpa --watch
+NAME           REFERENCE             TARGETS        MINPODS   MAXPODS   REPLICAS   AGE
+frontend-hpa   Deployment/frontend   cpu: 27%/50%   1         10        1          3m50s
+frontend-hpa   Deployment/frontend   cpu: 23%/50%   1         10        1          4m13s
+frontend-hpa   Deployment/frontend   cpu: 158%/50%   1         10        1          4m15s
+frontend-hpa   Deployment/frontend   cpu: 158%/50%   1         10        4          4m16s
+frontend-hpa   Deployment/frontend   cpu: 48%/50%    1         10        4          5m22s
+frontend-hpa   Deployment/frontend   cpu: 48%/50%    1         10        4          7m37s
+frontend-hpa   Deployment/frontend   cpu: 45%/50%    1         10        4          8m45s
+frontend-hpa   Deployment/frontend   cpu: 49%/50%    1         10        4          9m52s
+frontend-hpa   Deployment/frontend   cpu: 48%/50%    1         10        4          10m
+frontend-hpa   Deployment/frontend   cpu: 47%/50%    1         10        4          12m
+frontend-hpa   Deployment/frontend   cpu: 49%/50%    1         10        4          13m
+frontend-hpa   Deployment/frontend   cpu: 48%/50%    1         10        4          17m
+frontend-hpa   Deployment/frontend   cpu: 44%/50%    1         10        4          18m
+frontend-hpa   Deployment/frontend   cpu: 28%/50%    1         10        4          19m
+frontend-hpa   Deployment/frontend   cpu: 4%/50%     1         10        4          19m
+frontend-hpa   Deployment/frontend   cpu: 6%/50%     1         10        4          20m
+frontend-hpa   Deployment/frontend   cpu: 4%/50%     1         10        4          21m
+frontend-hpa   Deployment/frontend   cpu: 5%/50%     1         10        4          22m
+frontend-hpa   Deployment/frontend   cpu: 5%/50%     1         10        4          23m
+frontend-hpa   Deployment/frontend   cpu: 5%/50%     1         10        4          24m
+frontend-hpa   Deployment/frontend   cpu: 5%/50%     1         10        3          24m
+frontend-hpa   Deployment/frontend   cpu: 5%/50%     1         10        1          24m
+frontend-hpa   Deployment/frontend   cpu: 15%/50%    1         10        1          25m
+
+
+300 users 50% HPA
+
+kubectl get hpa --watch
+NAME           REFERENCE             TARGETS       MINPODS   MAXPODS   REPLICAS   AGE
+frontend-hpa   Deployment/frontend   cpu: 0%/50%   1         10        1          32m
+frontend-hpa   Deployment/frontend   cpu: 21%/50%   1         10        1          32m
+frontend-hpa   Deployment/frontend   cpu: 143%/50%   1         10        1          33m
+frontend-hpa   Deployment/frontend   cpu: 143%/50%   1         10        3          33m
+frontend-hpa   Deployment/frontend   cpu: 67%/50%    1         10        3          33m
+frontend-hpa   Deployment/frontend   cpu: 67%/50%    1         10        4          33m
+frontend-hpa   Deployment/frontend   cpu: 50%/50%    1         10        4          34m
+frontend-hpa   Deployment/frontend   cpu: 50%/50%    1         10        4          35m
+frontend-hpa   Deployment/frontend   cpu: 50%/50%    1         10        4          36m
+frontend-hpa   Deployment/frontend   cpu: 50%/50%    1         10        4          40m
+frontend-hpa   Deployment/frontend   cpu: 50%/50%    1         10        4          41m
+frontend-hpa   Deployment/frontend   cpu: 50%/50%    1         10        4          42m
+frontend-hpa   Deployment/frontend   cpu: 50%/50%    1         10        4          44m
+frontend-hpa   Deployment/frontend   cpu: 50%/50%    1         10        4          45m
+frontend-hpa   Deployment/frontend   cpu: 50%/50%    1         10        4          46m
+frontend-hpa   Deployment/frontend   cpu: 36%/50%    1         10        4          48m
+frontend-hpa   Deployment/frontend   cpu: 5%/50%     1         10        4          48m
+frontend-hpa   Deployment/frontend   cpu: 6%/50%     1         10        4          49m
+frontend-hpa   Deployment/frontend   cpu: 5%/50%     1         10        4          50m
+frontend-hpa   Deployment/frontend   cpu: 5%/50%     1         10        4          51m
+frontend-hpa   Deployment/frontend   cpu: 5%/50%     1         10        4          52m
+frontend-hpa   Deployment/frontend   cpu: 5%/50%     1         10        4          53m
+frontend-hpa   Deployment/frontend   cpu: 5%/50%     1         10        3          53m
+frontend-hpa   Deployment/frontend   cpu: 5%/50%     1         10        1          53m
+frontend-hpa   Deployment/frontend   cpu: 4%/50%     1         10        1          53m
+frontend-hpa   Deployment/frontend   cpu: 19%/50%    1         10        1          54m
+
+
+500 users 50% HPA
+
+kubectl get hpa --watch
+NAME           REFERENCE             TARGETS        MINPODS   MAXPODS   REPLICAS   AGE
+frontend-hpa   Deployment/frontend   cpu: 19%/50%   1         10        1          61m
+frontend-hpa   Deployment/frontend   cpu: 145%/50%   1         10        1          61m
+frontend-hpa   Deployment/frontend   cpu: 145%/50%   1         10        3          61m
+frontend-hpa   Deployment/frontend   cpu: 199%/50%   1         10        3          61m
+frontend-hpa   Deployment/frontend   cpu: 199%/50%   1         10        4          61m
+frontend-hpa   Deployment/frontend   cpu: 50%/50%    1         10        4          62m
+frontend-hpa   Deployment/frontend   cpu: 50%/50%    1         10        4          64m
+frontend-hpa   Deployment/frontend   cpu: 50%/50%    1         10        4          65m
+frontend-hpa   Deployment/frontend   cpu: 50%/50%    1         10        4          69m
+frontend-hpa   Deployment/frontend   cpu: 50%/50%    1         10        4          70m
+frontend-hpa   Deployment/frontend   cpu: 50%/50%    1         10        4          75m
+frontend-hpa   Deployment/frontend   cpu: 30%/50%    1         10        4          76m
+frontend-hpa   Deployment/frontend   cpu: 4%/50%     1         10        4          76m
+frontend-hpa   Deployment/frontend   cpu: 6%/50%     1         10        4          77m
+frontend-hpa   Deployment/frontend   cpu: 6%/50%     1         10        4          79m
+frontend-hpa   Deployment/frontend   cpu: 5%/50%     1         10        4          80m
+frontend-hpa   Deployment/frontend   cpu: 4%/50%     1         10        4          81m
+frontend-hpa   Deployment/frontend   cpu: 4%/50%     1         10        4          81m
+frontend-hpa   Deployment/frontend   cpu: 4%/50%     1         10        3          81m
+frontend-hpa   Deployment/frontend   cpu: 4%/50%     1         10        1          82m
+frontend-hpa   Deployment/frontend   cpu: 0%/50%     1         10        1          82m
+frontend-hpa   Deployment/frontend   cpu: 9%/50%     1         10        1          83m
+frontend-hpa   Deployment/frontend   cpu: 13%/50%    1         10        1          84m
+
+
+100 users 70% HPA
+
+kubectl get hpa --watch
+NAME           REFERENCE             TARGETS        MINPODS   MAXPODS   REPLICAS   AGE
+frontend-hpa   Deployment/frontend   cpu: 10%/70%   1         10        1          93m
+frontend-hpa   Deployment/frontend   cpu: 41%/70%   1         10        1          93m
+frontend-hpa   Deployment/frontend   cpu: 185%/70%   1         10        1          94m
+frontend-hpa   Deployment/frontend   cpu: 185%/70%   1         10        3          94m
+frontend-hpa   Deployment/frontend   cpu: 63%/70%    1         10        3          95m
+frontend-hpa   Deployment/frontend   cpu: 65%/70%    1         10        3          96m
+frontend-hpa   Deployment/frontend   cpu: 65%/70%    1         10        3          97m
+frontend-hpa   Deployment/frontend   cpu: 64%/70%    1         10        3          98m
+frontend-hpa   Deployment/frontend   cpu: 62%/70%    1         10        3          99m
+frontend-hpa   Deployment/frontend   cpu: 65%/70%    1         10        3          100m
+frontend-hpa   Deployment/frontend   cpu: 66%/70%    1         10        3          102m
+frontend-hpa   Deployment/frontend   cpu: 66%/70%    1         10        3          103m
+frontend-hpa   Deployment/frontend   cpu: 63%/70%    1         10        3          104m
+frontend-hpa   Deployment/frontend   cpu: 66%/70%    1         10        3          105m
+frontend-hpa   Deployment/frontend   cpu: 64%/70%    1         10        3          108m
+frontend-hpa   Deployment/frontend   cpu: 64%/70%    1         10        3          109m
+frontend-hpa   Deployment/frontend   cpu: 66%/70%    1         10        3          111m
+frontend-hpa   Deployment/frontend   cpu: 64%/70%    1         10        3          112m
+frontend-hpa   Deployment/frontend   cpu: 42%/70%    1         10        3          113m
+frontend-hpa   Deployment/frontend   cpu: 7%/70%     1         10        3          114m
+frontend-hpa   Deployment/frontend   cpu: 6%/70%     1         10        3          115m
+frontend-hpa   Deployment/frontend   cpu: 6%/70%     1         10        3          116m
+frontend-hpa   Deployment/frontend   cpu: 9%/70%     1         10        3          117m
+frontend-hpa   Deployment/frontend   cpu: 7%/70%     1         10        3          118m
+frontend-hpa   Deployment/frontend   cpu: 7%/70%     1         10        3          118m
+frontend-hpa   Deployment/frontend   cpu: 7%/70%     1         10        2          119m
+frontend-hpa   Deployment/frontend   cpu: 7%/70%     1         10        1          119m
+frontend-hpa   Deployment/frontend   cpu: 0%/70%     1         10        1          119m
+frontend-hpa   Deployment/frontend   cpu: 15%/70%    1         10        1          120m
+
+
+300 users 70% HPA
+
+kubectl get hpa --watch
+NAME           REFERENCE             TARGETS        MINPODS   MAXPODS   REPLICAS   AGE
+frontend-hpa   Deployment/frontend   cpu: 22%/70%   1         10        1          133m
+frontend-hpa   Deployment/frontend   cpu: 191%/70%   1         10        1          134m
+frontend-hpa   Deployment/frontend   cpu: 191%/70%   1         10        3          134m
+frontend-hpa   Deployment/frontend   cpu: 68%/70%    1         10        3          135m
+frontend-hpa   Deployment/frontend   cpu: 67%/70%    1         10        3          136m
+frontend-hpa   Deployment/frontend   cpu: 66%/70%    1         10        3          138m
+frontend-hpa   Deployment/frontend   cpu: 67%/70%    1         10        3          139m
+frontend-hpa   Deployment/frontend   cpu: 67%/70%    1         10        3          140m
+frontend-hpa   Deployment/frontend   cpu: 67%/70%    1         10        3          142m
+frontend-hpa   Deployment/frontend   cpu: 67%/70%    1         10        3          143m
+frontend-hpa   Deployment/frontend   cpu: 66%/70%    1         10        3          147m
+frontend-hpa   Deployment/frontend   cpu: 67%/70%    1         10        3          148m
+frontend-hpa   Deployment/frontend   cpu: 66%/70%    1         10        3          149m
+frontend-hpa   Deployment/frontend   cpu: 67%/70%    1         10        3          151m
+frontend-hpa   Deployment/frontend   cpu: 6%/70%     1         10        3          154m
+frontend-hpa   Deployment/frontend   cpu: 7%/70%     1         10        3          155m
+frontend-hpa   Deployment/frontend   cpu: 6%/70%     1         10        3          156m
+frontend-hpa   Deployment/frontend   cpu: 7%/70%     1         10        3          157m
+frontend-hpa   Deployment/frontend   cpu: 6%/70%     1         10        3          158m
+frontend-hpa   Deployment/frontend   cpu: 6%/70%     1         10        3          159m
+frontend-hpa   Deployment/frontend   cpu: 6%/70%     1         10        1          159m
+frontend-hpa   Deployment/frontend   cpu: 1%/70%     1         10        1          159m
+frontend-hpa   Deployment/frontend   cpu: 19%/70%    1         10        1          160m
+
+
+500 users 70% HPA
+kubectl get hpa --watch
+NAME           REFERENCE             TARGETS       MINPODS   MAXPODS   REPLICAS   AGE
+frontend-hpa   Deployment/frontend   cpu: 3%/70%   1         10        1          164m
+frontend-hpa   Deployment/frontend   cpu: 152%/70%   1         10        1          165m
+frontend-hpa   Deployment/frontend   cpu: 152%/70%   1         10        3          165m
+frontend-hpa   Deployment/frontend   cpu: 67%/70%    1         10        3          166m
+frontend-hpa   Deployment/frontend   cpu: 67%/70%    1         10        3          171m
+frontend-hpa   Deployment/frontend   cpu: 67%/70%    1         10        3          173m
+frontend-hpa   Deployment/frontend   cpu: 67%/70%    1         10        3          174m
+frontend-hpa   Deployment/frontend   cpu: 67%/70%    1         10        3          175m
+frontend-hpa   Deployment/frontend   cpu: 67%/70%    1         10        3          176m
+frontend-hpa   Deployment/frontend   cpu: 67%/70%    1         10        3          177m
+frontend-hpa   Deployment/frontend   cpu: 67%/70%    1         10        3          3h1m
+frontend-hpa   Deployment/frontend   cpu: 67%/70%    1         10        3          3h2m
+frontend-hpa   Deployment/frontend   cpu: 66%/70%    1         10        3          3h3m
+frontend-hpa   Deployment/frontend   cpu: 67%/70%    1         10        3          3h4m
+frontend-hpa   Deployment/frontend   cpu: 6%/70%     1         10        3          3h5m
+frontend-hpa   Deployment/frontend   cpu: 7%/70%     1         10        3          3h6m
+frontend-hpa   Deployment/frontend   cpu: 8%/70%     1         10        3          3h7m
+frontend-hpa   Deployment/frontend   cpu: 7%/70%     1         10        3          3h8m
+frontend-hpa   Deployment/frontend   cpu: 8%/70%     1         10        3          3h9m
+frontend-hpa   Deployment/frontend   cpu: 8%/70%     1         10        3          3h10m
+frontend-hpa   Deployment/frontend   cpu: 8%/70%     1         10        1          3h10m
+frontend-hpa   Deployment/frontend   cpu: 10%/70%    1         10        1          3h10m
+frontend-hpa   Deployment/frontend   cpu: 21%/70%    1         10        1          3h12m
+
+
+100 users 85% HPA
+
+kubectl get hpa --watch
+NAME           REFERENCE             TARGETS       MINPODS   MAXPODS   REPLICAS   AGE
+frontend-hpa   Deployment/frontend   cpu: 7%/85%   1         10        1          3h16m
+frontend-hpa   Deployment/frontend   cpu: 47%/85%   1         10        1          3h16m
+frontend-hpa   Deployment/frontend   cpu: 196%/85%   1         10        1          3h17m
+frontend-hpa   Deployment/frontend   cpu: 196%/85%   1         10        3          3h17m
+frontend-hpa   Deployment/frontend   cpu: 65%/85%    1         10        3          3h18m
+frontend-hpa   Deployment/frontend   cpu: 61%/85%    1         10        3          3h19m
+frontend-hpa   Deployment/frontend   cpu: 64%/85%    1         10        3          3h20m
+frontend-hpa   Deployment/frontend   cpu: 60%/85%    1         10        3          3h21m
+frontend-hpa   Deployment/frontend   cpu: 62%/85%    1         10        3          3h22m
+frontend-hpa   Deployment/frontend   cpu: 63%/85%    1         10        3          3h23m
+frontend-hpa   Deployment/frontend   cpu: 65%/85%    1         10        3          3h24m
+frontend-hpa   Deployment/frontend   cpu: 60%/85%    1         10        3          3h25m
+frontend-hpa   Deployment/frontend   cpu: 65%/85%    1         10        3          3h26m
+frontend-hpa   Deployment/frontend   cpu: 66%/85%    1         10        3          3h27m
+frontend-hpa   Deployment/frontend   cpu: 64%/85%    1         10        3          3h28m
+frontend-hpa   Deployment/frontend   cpu: 64%/85%    1         10        3          3h29m
+frontend-hpa   Deployment/frontend   cpu: 66%/85%    1         10        3          3h30m
+frontend-hpa   Deployment/frontend   cpu: 65%/85%    1         10        3          3h31m
+frontend-hpa   Deployment/frontend   cpu: 63%/85%    1         10        3          3h33m
+frontend-hpa   Deployment/frontend   cpu: 64%/85%    1         10        3          3h34m
+frontend-hpa   Deployment/frontend   cpu: 61%/85%    1         10        3          3h35m
+frontend-hpa   Deployment/frontend   cpu: 66%/85%    1         10        3          3h36m
+frontend-hpa   Deployment/frontend   cpu: 65%/85%    1         10        3          3h37m
+frontend-hpa   Deployment/frontend   cpu: 66%/85%    1         10        3          3h38m
+frontend-hpa   Deployment/frontend   cpu: 65%/85%    1         10        3          3h40m
+frontend-hpa   Deployment/frontend   cpu: 20%/85%    1         10        3          3h41m
+frontend-hpa   Deployment/frontend   cpu: 5%/85%     1         10        3          3h43m
+frontend-hpa   Deployment/frontend   cpu: 7%/85%     1         10        3          3h44m
+frontend-hpa   Deployment/frontend   cpu: 6%/85%     1         10        3          3h45m
+frontend-hpa   Deployment/frontend   cpu: 6%/85%     1         10        3          3h46m
+frontend-hpa   Deployment/frontend   cpu: 6%/85%     1         10        3          3h46m
+frontend-hpa   Deployment/frontend   cpu: 6%/85%     1         10        1          3h46m
+frontend-hpa   Deployment/frontend   cpu: 20%/85%    1         10        1          3h47m
+frontend-hpa   Deployment/frontend   cpu: 23%/85%    1         10        1          3h48m
+frontend-hpa   Deployment/frontend   cpu: 19%/85%    1         10        1          3h49m
+frontend-hpa   Deployment/frontend   cpu: 22%/85%    1         10        1          3h50m
+
+
+300 users 85% HPA
+
+kubectl get hpa --watch
+horizontalpodautoscaler.autoscaling/frontend-hpa created
+NAME           REFERENCE             TARGETS              MINPODS   MAXPODS   REPLICAS   AGE
+frontend-hpa   Deployment/frontend   cpu: 4%/85%          1         10        1          22s
+frontend-hpa   Deployment/frontend   cpu: 172%/85%        1         10        1          63s
+frontend-hpa   Deployment/frontend   cpu: 172%/85%        1         10        3          75s
+frontend-hpa   Deployment/frontend   cpu: 67%/85%         1         10        3          2m10s
+frontend-hpa   Deployment/frontend   cpu: 66%/85%         1         10        3          4m14s
+frontend-hpa   Deployment/frontend   cpu: 67%/85%         1         10        3          7m33s
+frontend-hpa   Deployment/frontend   cpu: 66%/85%         1         10        3          10m
+frontend-hpa   Deployment/frontend   cpu: 67%/85%         1         10        3          11m
+frontend-hpa   Deployment/frontend   cpu: 66%/85%         1         10        3          13m
+frontend-hpa   Deployment/frontend   cpu: 67%/85%         1         10        3          14m
+frontend-hpa   Deployment/frontend   cpu: 66%/85%         1         10        3          15m
+frontend-hpa   Deployment/frontend   cpu: 66%/85%         1         10        3          18m
+frontend-hpa   Deployment/frontend   cpu: 66%/85%         1         10        3          19m
+frontend-hpa   Deployment/frontend   cpu: 67%/85%         1         10        3          20m
+frontend-hpa   Deployment/frontend   cpu: 66%/85%         1         10        3          23m
+frontend-hpa   Deployment/frontend   cpu: 67%/85%         1         10        3          24m
+frontend-hpa   Deployment/frontend   cpu: 54%/85%         1         10        3          25m
+frontend-hpa   Deployment/frontend   cpu: 8%/85%          1         10        3          26m
+frontend-hpa   Deployment/frontend   cpu: 6%/85%          1         10        3          27m
+frontend-hpa   Deployment/frontend   cpu: 7%/85%          1         10        3          28m
+frontend-hpa   Deployment/frontend   cpu: 6%/85%          1         10        3          30m
+frontend-hpa   Deployment/frontend   cpu: 6%/85%          1         10        3          30m
+frontend-hpa   Deployment/frontend   cpu: 6%/85%          1         10        2          31m
+frontend-hpa   Deployment/frontend   cpu: 6%/85%          1         10        1          31m
+frontend-hpa   Deployment/frontend   cpu: 17%/85%         1         10        1          31m
+frontend-hpa   Deployment/frontend   cpu: 18%/85%         1         10        1          32m
+frontend-hpa   Deployment/frontend   cpu: 16%/85%         1         10        1          33m
+
+
+500 users 85% HPA
+
+kubectl get hpa --watch
+NAME           REFERENCE             TARGETS       MINPODS   MAXPODS   REPLICAS   AGE
+frontend-hpa   Deployment/frontend   cpu: 0%/85%   1         10        1          40m
+frontend-hpa   Deployment/frontend   cpu: 161%/85%   1         10        1          41m
+frontend-hpa   Deployment/frontend   cpu: 161%/85%   1         10        2          41m
+frontend-hpa   Deployment/frontend   cpu: 200%/85%   1         10        2          41m
+frontend-hpa   Deployment/frontend   cpu: 200%/85%   1         10        3          41m
+frontend-hpa   Deployment/frontend   cpu: 67%/85%    1         10        3          42m
+frontend-hpa   Deployment/frontend   cpu: 67%/85%    1         10        3          43m
+frontend-hpa   Deployment/frontend   cpu: 67%/85%    1         10        3          44m
+frontend-hpa   Deployment/frontend   cpu: 66%/85%    1         10        3          49m
+frontend-hpa   Deployment/frontend   cpu: 67%/85%    1         10        3          50m
+frontend-hpa   Deployment/frontend   cpu: 67%/85%    1         10        3          52m
+frontend-hpa   Deployment/frontend   cpu: 67%/85%    1         10        3          53m
+frontend-hpa   Deployment/frontend   cpu: 67%/85%    1         10        3          54m
+frontend-hpa   Deployment/frontend   cpu: 67%/85%    1         10        3          58m
+frontend-hpa   Deployment/frontend   cpu: 67%/85%    1         10        3          59m
+frontend-hpa   Deployment/frontend   cpu: 67%/85%    1         10        3          60m
+frontend-hpa   Deployment/frontend   cpu: 66%/85%    1         10        3          63m
+frontend-hpa   Deployment/frontend   cpu: 67%/85%    1         10        3          64m
+frontend-hpa   Deployment/frontend   cpu: 24%/85%    1         10        3          66m
+frontend-hpa   Deployment/frontend   cpu: 7%/85%     1         10        3          67m
+frontend-hpa   Deployment/frontend   cpu: 7%/85%     1         10        3          68m
+frontend-hpa   Deployment/frontend   cpu: 7%/85%     1         10        3          69m
+frontend-hpa   Deployment/frontend   cpu: 7%/85%     1         10        3          70m
+frontend-hpa   Deployment/frontend   cpu: 7%/85%     1         10        3          71m
+frontend-hpa   Deployment/frontend   cpu: 7%/85%     1         10        1          71m
+frontend-hpa   Deployment/frontend   cpu: 16%/85%    1         10        1          71m
+frontend-hpa   Deployment/frontend   cpu: 20%/85%    1         10        1          72m
+frontend-hpa   Deployment/frontend   cpu: 13%/85%    1         10        1          73m

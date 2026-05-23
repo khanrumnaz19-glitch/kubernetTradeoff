@@ -1,0 +1,124 @@
+# ⚙️ Performance vs. Cost Efficiency in Kubernetes-Based Microservice Autoscaling
+
+![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Google Cloud](https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)
+![Locust](https://img.shields.io/badge/Locust-2.43-green?style=for-the-badge)
+![MUN](https://img.shields.io/badge/Memorial_University-COMP_6910-red?style=for-the-badge)
+
+> **COMP 6910 — Cloud Computing | Winter 2026**  
+> Memorial University of Newfoundland  
+> Instructor: Dr. Kaiyang Liu
+
+---
+
+## 👥 Group 3
+
+| Name | Student ID |
+|------|------------|
+| Afiya Farjana | 202486149 |
+| Jannatul Ferdous | 202487105 |
+| Rumnaz Khan | 202487843 |
+
+---
+
+## 📌 Overview
+
+This research investigates the **performance vs. cost tradeoff** of Kubernetes Horizontal Pod Autoscaler (HPA) across two environments — **Minikube** (local) and **Google Kubernetes Engine (GKE)** (cloud). Using Google's Online Boutique microservices demo app and Locust for load testing, we conducted **36 experiments** varying CPU thresholds, user loads, and autoscaling scopes to identify the optimal configuration for different use cases.
+
+---
+
+## 🔑 Key Findings
+
+- 🏆 **GKE outperformed Minikube** across all high-load scenarios, offering superior scalability and stability
+- ✅ **70% CPU threshold** delivered the best balance between performance and resource efficiency — though the ideal threshold ultimately depends on the specific application requirements
+- ⚠️ **Minikube struggled at 500 concurrent users**, showing significant performance degradation and errors, making it unsuitable for production-level workloads
+- 💡 **Minikube remains a viable option** for development and low-to-medium load scenarios (100–300 users) where cost is a priority
+- 📊 **Multi-service HPA** provided more granular and efficient autoscaling compared to single-service configurations
+
+---
+
+## 🧪 Experiment Design
+
+| Parameter | Values |
+|-----------|--------|
+| Environments | Minikube, GKE |
+| CPU Thresholds | 50%, 70%, 85% |
+| Concurrent Users | 100, 300, 500 |
+| Autoscaling Scope | Single-service, Multi-service |
+| Total Experiments | 36 (18 Minikube + 18 GKE) |
+| Load Testing Tool | Locust 2.43 |
+
+---
+
+## 📁 Repository Structure
+
+```
+kubernetes-tradeoff/
+│
+├── README.md                           ← This file
+├── Cloud_Project_report.pdf            ← Final report (LNCS format)
+├── Cloud_Computing_Presentation.pptx   ← Slides delivered April 7, 2026
+│
+├── Data analysis code/
+│   ├── Minikube_data_analysis.ipynb    ← Analysis notebook — Minikube
+│   └── GKE_data_analysis.ipynb         ← Analysis notebook — GKE
+│
+├── microservices-demo/
+│   ├── hpa-configs/
+│   │   ├── frontend-hpa.yaml           ← HPA configurations used
+│   │   ├── cart-hpa.yaml               ← across all 36 experiments
+│   │   ├── checkout-hpa.yaml
+│   │   └── recommendation-hpa.yaml
+│   └── raw-data/
+│       ├── minikube/                   ← 18 experiment folders (Locust HTML reports)
+│       ├── gke/                        ← 18 experiment folders (Locust HTML reports)
+│       ├── HPA_single.txt              ← Minikube single-service HPA watch logs
+│       ├── HPA.txt                     ← Minikube multi-service HPA watch logs
+│       ├── HPA_Single_gke.txt          ← GKE single-service HPA watch logs
+│       └── HPA_multi_gke.txt           ← GKE multi-service HPA watch logs
+│
+└── Processed data/
+    ├── comp6910_graphs_minikube/       ← Minikube experiment graphs
+    ├── comp6910_graphs_gke/            ← GKE experiment graphs
+    └── comp6910_graphs_comparison/     ← Minikube vs GKE comparison graphs
+```
+
+---
+
+## 🚀 Running the Analysis Notebooks
+
+The notebooks are designed to run on **Google Colab**:
+
+1. Upload the contents of `microservices-demo/raw-data/` to Google Drive under:
+   ```
+   MyDrive/comp6910/
+   ```
+2. Open `Minikube_data_analysis.ipynb` or `GKE_data_analysis.ipynb` in Google Colab
+3. Run all cells
+
+---
+
+## 🛠️ Tech Stack
+
+- **Kubernetes** — Container orchestration (Minikube + GKE)
+- **Horizontal Pod Autoscaler (HPA)** — Kubernetes autoscaling
+- **Google Online Boutique** — Microservices demo application
+- **Locust 2.43** — Load testing
+- **Python / Jupyter** — Data analysis
+- **Google Cloud Platform** — Cloud environment
+
+---
+
+## 📄 Report & Slides
+
+| Document | Description |
+|----------|-------------|
+| `Cloud_Project_report.pdf` | Full research report in LNCS format |
+| `Cloud_Computing_Presentation.pptx` | Presentation slides (April 7, 2026) |
+
+---
+
+## 📜 License
+
+This project was submitted as academic coursework at Memorial University of Newfoundland. All rights reserved by the authors. 

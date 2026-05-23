@@ -1,0 +1,248 @@
+Single Service
+
+100 users 50% HPA
+
+PS C:\Windows\system32> kubectl get hpa --watch
+NAME           REFERENCE             TARGETS        MINPODS   MAXPODS   REPLICAS   AGE
+frontend-hpa   Deployment/frontend   cpu: 15%/50%   1         10        1          46m
+frontend-hpa   Deployment/frontend   cpu: 89%/50%   1         10        1          47m
+frontend-hpa   Deployment/frontend   cpu: 89%/50%   1         10        2          47m
+frontend-hpa   Deployment/frontend   cpu: 191%/50%  1         10        2          48m
+frontend-hpa   Deployment/frontend   cpu: 191%/50%  1         10        4          48m
+frontend-hpa   Deployment/frontend   cpu: 94%/50%   1         10        4          49m
+frontend-hpa   Deployment/frontend   cpu: 49%/50%   1         10        4          50m
+frontend-hpa   Deployment/frontend   cpu: 48%/50%   1         10        4          52m
+frontend-hpa   Deployment/frontend   cpu: 46%/50%   1         10        4          53m
+frontend-hpa   Deployment/frontend   cpu: 50%/50%   1         10        4          54m
+frontend-hpa   Deployment/frontend   cpu: 49%/50%   1         10        4          55m
+frontend-hpa   Deployment/frontend   cpu: 48%/50%   1         10        4          56m
+frontend-hpa   Deployment/frontend   cpu: 47%/50%   1         10        4          58m
+frontend-hpa   Deployment/frontend   cpu: 49%/50%   1         10        4          59m
+frontend-hpa   Deployment/frontend   cpu: 50%/50%   1         10        4          60m
+frontend-hpa   Deployment/frontend   cpu: 49%/50%   1         10        4          61m
+frontend-hpa   Deployment/frontend   cpu: 28%/50%   1         10        4          62m
+frontend-hpa   Deployment/frontend   cpu: 4%/50%    1         10        4          63m
+frontend-hpa   Deployment/frontend   cpu: 4%/50%    1         10        4          66m
+frontend-hpa   Deployment/frontend   cpu: 6%/50%    1         10        3          67m
+frontend-hpa   Deployment/frontend   cpu: 6%/50%    1         10        3          67m
+frontend-hpa   Deployment/frontend   cpu: 14%/50%   1         10        1          68m
+frontend-hpa   Deployment/frontend   cpu: 15%/50%   1         10        1          70m
+
+
+300 users 50% HPA
+
+PS C:\Windows\system32> kubectl get hpa --watch
+NAME           REFERENCE             TARGETS        MINPODS   MAXPODS   REPLICAS   AGE
+frontend-hpa   Deployment/frontend   cpu: 17%/50%   1         10        1          8d
+frontend-hpa   Deployment/frontend   cpu: 101%/50%   1         10        1          8d
+frontend-hpa   Deployment/frontend   cpu: 101%/50%   1         10        3          8d
+frontend-hpa   Deployment/frontend   cpu: 197%/50%   1         10        3          8d
+frontend-hpa   Deployment/frontend   cpu: 197%/50%   1         10        4          8d
+frontend-hpa   Deployment/frontend   cpu: 67%/50%    1         10        4          8d
+frontend-hpa   Deployment/frontend   cpu: 50%/50%    1         10        4          8d
+frontend-hpa   Deployment/frontend   cpu: 49%/50%    1         10        4          8d
+frontend-hpa   Deployment/frontend   cpu: 50%/50%    1         10        4          8d
+frontend-hpa   Deployment/frontend   cpu: 28%/50%    1         10        4          8d
+frontend-hpa   Deployment/frontend   cpu: 4%/50%     1         10        4          8d
+frontend-hpa   Deployment/frontend   cpu: 4%/50%     1         10        4          8d
+frontend-hpa   Deployment/frontend   cpu: 5%/50%     1         10        3          8d
+frontend-hpa   Deployment/frontend   cpu: 5%/50%     1         10        3          8d
+frontend-hpa   Deployment/frontend   cpu: 14%/50%    1         10        1          8d
+frontend-hpa   Deployment/frontend   cpu: 15%/50%    1         10        1          8d
+frontend-hpa   Deployment/frontend   cpu: 14%/50%    1         10        1          8d
+frontend-hpa   Deployment/frontend   cpu: 16%/50%    1         10        1          8d
+frontend-hpa   Deployment/frontend   cpu: 13%/50%    1         10        1          8d
+frontend-hpa   Deployment/frontend   cpu: 15%/50%    1         10        1          8d
+
+
+500 users 50% HPA
+
+PS C:\Windows\system32> kubectl get hpa --watch
+NAME           REFERENCE             TARGETS        MINPODS   MAXPODS   REPLICAS   AGE
+frontend-hpa   Deployment/frontend   cpu: 15%/50%   1         10        1          8d
+frontend-hpa   Deployment/frontend   cpu: 113%/50%   1         10        1          8d
+frontend-hpa   Deployment/frontend   cpu: 113%/50%   1         10        3          8d
+frontend-hpa   Deployment/frontend   cpu: 197%/50%   1         10        3          8d
+frontend-hpa   Deployment/frontend   cpu: 197%/50%   1         10        4          8d
+frontend-hpa   Deployment/frontend   cpu: 66%/50%    1         10        4          8d
+frontend-hpa   Deployment/frontend   cpu: 50%/50%    1         10        4          8d
+frontend-hpa   Deployment/frontend   cpu: 26%/50%    1         10        4          8d
+frontend-hpa   Deployment/frontend   cpu: 4%/50%     1         10        4          8d
+frontend-hpa   Deployment/frontend   cpu: 4%/50%     1         10        4          8d
+frontend-hpa   Deployment/frontend   cpu: 5%/50%     1         10        3          8d
+frontend-hpa   Deployment/frontend   cpu: 5%/50%     1         10        3          8d
+frontend-hpa   Deployment/frontend   cpu: 15%/50%    1         10        1          8d
+frontend-hpa   Deployment/frontend   cpu: 13%/50%    1         10        1          8d
+frontend-hpa   Deployment/frontend   cpu: 16%/50%    1         10        1          8d
+frontend-hpa   Deployment/frontend   cpu: 15%/50%    1         10        1          8d
+frontend-hpa   Deployment/frontend   cpu: 13%/50%    1         10        1          8d
+
+
+100 users 70% HPA
+
+PS C:\Windows\system32> kubectl get hpa --watch
+NAME           REFERENCE             TARGETS        MINPODS   MAXPODS   REPLICAS   AGE
+frontend-hpa   Deployment/frontend   cpu: 14%/70%   1         10        1          137m
+frontend-hpa   Deployment/frontend   cpu: 117%/70%  1         10        1          138m
+frontend-hpa   Deployment/frontend   cpu: 117%/70%  1         10        2          138m
+frontend-hpa   Deployment/frontend   cpu: 180%/70%  1         10        2          139m
+frontend-hpa   Deployment/frontend   cpu: 180%/70%  1         10        3          139m
+frontend-hpa   Deployment/frontend   cpu: 120%/70%  1         10        3          140m
+frontend-hpa   Deployment/frontend   cpu: 120%/70%  1         10        4          140m
+frontend-hpa   Deployment/frontend   cpu: 81%/70%   1         10        4          141m
+frontend-hpa   Deployment/frontend   cpu: 60%/70%   1         10        4          142m
+frontend-hpa   Deployment/frontend   cpu: 62%/70%   1         10        4          143m
+frontend-hpa   Deployment/frontend   cpu: 58%/70%   1         10        4          145m
+frontend-hpa   Deployment/frontend   cpu: 60%/70%   1         10        4          146m
+frontend-hpa   Deployment/frontend   cpu: 62%/70%   1         10        4          147m
+frontend-hpa   Deployment/frontend   cpu: 60%/70%   1         10        4          148m
+frontend-hpa   Deployment/frontend   cpu: 61%/70%   1         10        4          149m
+frontend-hpa   Deployment/frontend   cpu: 63%/70%   1         10        4          150m
+frontend-hpa   Deployment/frontend   cpu: 61%/70%   1         10        4          151m
+frontend-hpa   Deployment/frontend   cpu: 20%/70%   1         10        4          153m
+frontend-hpa   Deployment/frontend   cpu: 4%/70%    1         10        4          154m
+frontend-hpa   Deployment/frontend   cpu: 5%/70%    1         10        4          155m
+frontend-hpa   Deployment/frontend   cpu: 4%/70%    1         10        4          156m
+frontend-hpa   Deployment/frontend   cpu: 7%/70%    1         10        2          157m
+frontend-hpa   Deployment/frontend   cpu: 7%/70%    1         10        2          158m
+frontend-hpa   Deployment/frontend   cpu: 15%/70%   1         10        1          159m
+frontend-hpa   Deployment/frontend   cpu: 14%/70%   1         10        1          160m
+frontend-hpa   Deployment/frontend   cpu: 16%/70%   1         10        1          161m
+
+
+300 users 70% HPA
+
+PS C:\Windows\system32> kubectl get hpa --watch
+NAME           REFERENCE             TARGETS        MINPODS   MAXPODS   REPLICAS   AGE
+frontend-hpa   Deployment/frontend   cpu: 14%/70%   1         10        1          5h12m
+frontend-hpa   Deployment/frontend   cpu: 186%/70%  1         10        1          5h13m
+frontend-hpa   Deployment/frontend   cpu: 186%/70%  1         10        3          5h13m
+frontend-hpa   Deployment/frontend   cpu: 198%/70%  1         10        3          5h14m
+frontend-hpa   Deployment/frontend   cpu: 79%/70%   1         10        3          5h15m
+frontend-hpa   Deployment/frontend   cpu: 79%/70%   1         10        4          5h15m
+frontend-hpa   Deployment/frontend   cpu: 81%/70%   1         10        4          5h16m
+frontend-hpa   Deployment/frontend   cpu: 67%/70%   1         10        4          5h17m
+frontend-hpa   Deployment/frontend   cpu: 5%/70%    1         10        4          5h31m
+frontend-hpa   Deployment/frontend   cpu: 44%/70%   1         10        4          5h32m
+frontend-hpa   Deployment/frontend   cpu: 4%/70%    1         10        4          5h33m
+frontend-hpa   Deployment/frontend   cpu: 4%/70%    1         10        4          5h36m
+frontend-hpa   Deployment/frontend   cpu: 5%/70%    1         10        3          5h36m
+frontend-hpa   Deployment/frontend   cpu: 5%/70%    1         10        3          5h38m
+frontend-hpa   Deployment/frontend   cpu: 17%/70%   1         10        1          5h38m
+frontend-hpa   Deployment/frontend   cpu: 15%/70%   1         10        1          5h39m
+
+
+500 users 70% HPA
+
+PS C:\Windows\system32> kubectl get hpa --watch
+NAME           REFERENCE             TARGETS        MINPODS   MAXPODS   REPLICAS   AGE
+frontend-hpa   Deployment/frontend   cpu: 16%/70%   1         10        1          2m49s
+frontend-hpa   Deployment/frontend   cpu: 14%/70%   1         10        1          3m45s
+frontend-hpa   Deployment/frontend   cpu: 17%/70%   1         10        1          4m45s
+frontend-hpa   Deployment/frontend   cpu: 194%/70%  1         10        1          5m45s
+frontend-hpa   Deployment/frontend   cpu: 194%/70%  1         10        3          6m
+frontend-hpa   Deployment/frontend   cpu: 196%/70%  1         10        3          6m45s
+frontend-hpa   Deployment/frontend   cpu: 66%/70%   1         10        3          7m45s
+frontend-hpa   Deployment/frontend   cpu: 67%/70%   1         10        3          8m45s
+frontend-hpa   Deployment/frontend   cpu: 66%/70%   1         10        3          14m
+frontend-hpa   Deployment/frontend   cpu: 67%/70%   1         10        3          17m
+frontend-hpa   Deployment/frontend   cpu: 66%/70%   1         10        3          18m
+frontend-hpa   Deployment/frontend   cpu: 66%/70%   1         10        3          20m
+frontend-hpa   Deployment/frontend   cpu: 67%/70%   1         10        3          21m
+frontend-hpa   Deployment/frontend   cpu: 66%/70%   1         10        3          22m
+frontend-hpa   Deployment/frontend   cpu: 19%/70%   1         10        3          23m
+frontend-hpa   Deployment/frontend   cpu: 5%/70%    1         10        3          24m
+frontend-hpa   Deployment/frontend   cpu: 5%/70%    1         10        3          28m
+frontend-hpa   Deployment/frontend   cpu: 16%/70%   1         10        1          28m
+frontend-hpa   Deployment/frontend   cpu: 17%/70%   1         10        1          29m
+frontend-hpa   Deployment/frontend   cpu: 13%/70%   1         10        1          30m
+frontend-hpa   Deployment/frontend   cpu: 15%/70%   1         10        1          31m
+
+
+100 users 85% HPA
+
+PS C:\Windows\system32> kubectl get hpa --watch
+NAME           REFERENCE             TARGETS        MINPODS   MAXPODS   REPLICAS   AGE
+frontend-hpa   Deployment/frontend   cpu: 15%/85%   1         10        1          38m
+frontend-hpa   Deployment/frontend   cpu: 18%/85%   1         10        1          38m
+frontend-hpa   Deployment/frontend   cpu: 127%/85%  1         10        1          39m
+frontend-hpa   Deployment/frontend   cpu: 127%/85%  1         10        2          40m
+frontend-hpa   Deployment/frontend   cpu: 132%/85%  1         10        2          40m
+frontend-hpa   Deployment/frontend   cpu: 65%/85%   1         10        2          41m
+frontend-hpa   Deployment/frontend   cpu: 84%/85%   1         10        2          43m
+frontend-hpa   Deployment/frontend   cpu: 131%/85%  1         10        2          44m
+frontend-hpa   Deployment/frontend   cpu: 131%/85%  1         10        4          45m
+frontend-hpa   Deployment/frontend   cpu: 133%/85%  1         10        4          45m
+frontend-hpa   Deployment/frontend   cpu: 67%/85%   1         10        4          46m
+frontend-hpa   Deployment/frontend   cpu: 64%/85%   1         10        4          47m
+frontend-hpa   Deployment/frontend   cpu: 65%/85%   1         10        4          48m
+frontend-hpa   Deployment/frontend   cpu: 61%/85%   1         10        4          49m
+frontend-hpa   Deployment/frontend   cpu: 66%/85%   1         10        4          50m
+frontend-hpa   Deployment/frontend   cpu: 68%/85%   1         10        4          51m
+frontend-hpa   Deployment/frontend   cpu: 65%/85%   1         10        4          52m
+frontend-hpa   Deployment/frontend   cpu: 66%/85%   1         10        4          53m
+frontend-hpa   Deployment/frontend   cpu: 65%/85%   1         10        4          54m
+frontend-hpa   Deployment/frontend   cpu: 68%/85%   1         10        4          55m
+frontend-hpa   Deployment/frontend   cpu: 65%/85%   1         10        4          56m
+frontend-hpa   Deployment/frontend   cpu: 67%/85%   1         10        4          57m
+frontend-hpa   Deployment/frontend   cpu: 64%/85%   1         10        4          58m
+frontend-hpa   Deployment/frontend   cpu: 5%/85%    1         10        4          59m
+frontend-hpa   Deployment/frontend   cpu: 4%/85%    1         10        4          60m
+frontend-hpa   Deployment/frontend   cpu: 4%/85%    1         10        4          61m
+frontend-hpa   Deployment/frontend   cpu: 4%/85%    1         10        4          64m
+frontend-hpa   Deployment/frontend   cpu: 15%/85%   1         10        1          64m
+frontend-hpa   Deployment/frontend   cpu: 14%/85%   1         10        1          65m
+
+
+300 users 85% HPA
+
+PS C:\Windows\system32> kubectl get hpa --watch
+NAME           REFERENCE             TARGETS        MINPODS   MAXPODS   REPLICAS   AGE
+frontend-hpa   Deployment/frontend   cpu: 14%/85%   1         10        1          147m
+frontend-hpa   Deployment/frontend   cpu: 74%/85%   1         10        1          147m
+frontend-hpa   Deployment/frontend   cpu: 200%/85%  1         10        1          148m
+frontend-hpa   Deployment/frontend   cpu: 200%/85%  1         10        3          148m
+frontend-hpa   Deployment/frontend   cpu: 67%/85%   1         10        3          150m
+frontend-hpa   Deployment/frontend   cpu: 66%/85%   1         10        3          154m
+frontend-hpa   Deployment/frontend   cpu: 67%/85%   1         10        3          156m
+frontend-hpa   Deployment/frontend   cpu: 66%/85%   1         10        3          158m
+frontend-hpa   Deployment/frontend   cpu: 67%/85%   1         10        3          160m
+frontend-hpa   Deployment/frontend   cpu: 66%/85%   1         10        3          164m
+frontend-hpa   Deployment/frontend   cpu: 67%/85%   1         10        3          165m
+frontend-hpa   Deployment/frontend   cpu: 66%/85%   1         10        3          170m
+frontend-hpa   Deployment/frontend   cpu: 67%/85%   1         10        3          171m
+frontend-hpa   Deployment/frontend   cpu: 44%/85%   1         10        3          172m
+frontend-hpa   Deployment/frontend   cpu: 6%/85%    1         10        3          173m
+frontend-hpa   Deployment/frontend   cpu: 5%/85%    1         10        3          174m
+frontend-hpa   Deployment/frontend   cpu: 6%/85%    1         10        3          175m
+frontend-hpa   Deployment/frontend   cpu: 5%/85%    1         10        3          176m
+frontend-hpa   Deployment/frontend   cpu: 5%/85%    1         10        3          177m
+frontend-hpa   Deployment/frontend   cpu: 2%/85%    1         10        2          177m
+frontend-hpa   Deployment/frontend   cpu: 2%/85%    1         10        2          178m
+frontend-hpa   Deployment/frontend   cpu: 9%/85%    1         10        1          178m
+frontend-hpa   Deployment/frontend   cpu: 16%/85%   1         10        1          179m
+
+
+500 users 85% HPA
+
+PS C:\Windows\system32> kubectl get hpa --watch
+NAME           REFERENCE             TARGETS        MINPODS   MAXPODS   REPLICAS   AGE
+frontend-hpa   Deployment/frontend   cpu: 14%/85%   1         10        1          3h7m
+frontend-hpa   Deployment/frontend   cpu: 174%/85%  1         10        1          3h8m
+frontend-hpa   Deployment/frontend   cpu: 174%/85%  1         10        3          3h8m
+frontend-hpa   Deployment/frontend   cpu: 199%/85%  1         10        3          3h9m
+frontend-hpa   Deployment/frontend   cpu: 66%/85%   1         10        3          3h10m
+frontend-hpa   Deployment/frontend   cpu: 67%/85%   1         10        3          3h13m
+frontend-hpa   Deployment/frontend   cpu: 66%/85%   1         10        3          3h17m
+frontend-hpa   Deployment/frontend   cpu: 67%/85%   1         10        3          3h19m
+frontend-hpa   Deployment/frontend   cpu: 66%/85%   1         10        3          3h23m
+frontend-hpa   Deployment/frontend   cpu: 67%/85%   1         10        3          3h26m
+frontend-hpa   Deployment/frontend   cpu: 66%/85%   1         10        3          3h30m
+frontend-hpa   Deployment/frontend   cpu: 67%/85%   1         10        3          3h32m
+frontend-hpa   Deployment/frontend   cpu: 14%/85%   1         10        3          3h33m
+frontend-hpa   Deployment/frontend   cpu: 6%/85%    1         10        3          3h34m
+frontend-hpa   Deployment/frontend   cpu: 5%/85%    1         10        3          3h36m
+frontend-hpa   Deployment/frontend   cpu: 5%/85%    1         10        3          3h38m
+frontend-hpa   Deployment/frontend   cpu: 3%/85%    1         10        1          3h38m
+frontend-hpa   Deployment/frontend   cpu: 14%/85%   1         10        1          3h39m
+frontend-hpa   Deployment/frontend   cpu: 16%/85%   1         10        1          3h40m
